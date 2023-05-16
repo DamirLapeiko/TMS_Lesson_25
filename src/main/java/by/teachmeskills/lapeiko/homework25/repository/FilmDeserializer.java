@@ -5,7 +5,11 @@ import by.teachmeskills.lapeiko.homework25.model.Show;
 
 import java.time.Year;
 
-public class FilmDeserializer implements ShowDeserializer{
+public class FilmDeserializer implements ShowDeserializer {
+    public static final FilmDeserializer FILM = new FilmDeserializer();
+    private FilmDeserializer(){
+
+    }
     @Override
     public Show deserialize(String line) {
         String[] parts = line.split(",");
